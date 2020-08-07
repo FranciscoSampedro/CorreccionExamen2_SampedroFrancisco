@@ -7,6 +7,7 @@ class ModuloService extends MainService {
     function findAll(){
         return $this->conex->query("SELECT COD_MODULO, NOMBRE, ESTADO FROM SEG_MODULO WHERE ESTADO LIKE '%ACT%'");
     }
+    
 
     function findByPK($codModulo) {
         $result = $this->conex->query("SELECT * FROM seg_modulo WHERE COD_MODULO = '$codModulo' ");

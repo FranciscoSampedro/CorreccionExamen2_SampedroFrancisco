@@ -76,14 +76,14 @@
                     
                     if(isset($_POST['cod_select']))
                     
-                    $listModules=$moduloService->findByPK('SYSGESTIONEDIFIC');
+                    $dModulo=$moduloService->findByPK('SYSGESTIONEDIFIC');
                     $i=0;
-                    while($fila = mysqli_fetch_array($listModules)){
-                        $codFuncionaldad=$fila['COD_FUNCIONALIDAD'];
-                        $codModulo=$fila['COD_MODULO'];
-                        $URL=$fila['URL_PRINCIPAL'];
-                        $nombreFuncionalidad=$fila['NOMBRE'];
-                        $Descripcion=$fila['DESCRIPCION'];
+                    while($dModulo){
+                        $codFuncionaldad=$dModulo['COD_FUNCIONALIDAD'];
+                        $codModulo=$dModulo['COD_MODULO'];
+                        $URL=$dModulo['URL_PRINCIPAL'];
+                        $nombreFuncionalidad=$dModulo['NOMBRE'];
+                        $Descripcion=$dModulo['DESCRIPCION'];
                         $i++;
 
                     ?>
